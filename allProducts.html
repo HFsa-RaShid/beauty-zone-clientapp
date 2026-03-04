@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/products.css" />
+
+    <title>All Products</title>
+  </head>
+  <body>
+    <div class="container-outer">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container-sub">
+          <div class="navbox">
+            <div class="navbox1">
+              <div class="logo">
+                <img src="assets/logo.png" onclick="window.location.href = 'index.html'" alt="Beauty Zone Logo" />
+              </div>
+              <ul class="nav-links">
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a onclick="window.location.href = 'about.html'">About</a></li>
+                <li>
+                  <a onclick="window.location.href = 'contact.html'">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbox1">
+              <div class="nav-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i
+                  class="fa-solid fa-bag-shopping"
+                  onclick="window.location.href = 'cart.html'"
+                ></i>
+              </div>
+              <div id="auth-btn-container">
+                <button
+                  class="nav-toggle-btn"
+                  onclick="window.location.href = 'register.html'"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-sub" style="margin-top: 120px">
+        <div class="filter-bar">
+          <div class="filter-links">
+            <a href="#" class="filter-btn active" data-category="all"
+              >All Product</a
+            >
+            <a href="#" class="filter-btn" data-category="Serums">Serums</a>
+            <a href="#" class="filter-btn" data-category="Makeup">Makeup</a>
+            <a href="#" class="filter-btn" data-category="Sun Care">Sun Care</a>
+            <a href="#" class="filter-btn" data-category="Cleansers"
+              >Cleansers</a
+            >
+            <a href="#" class="filter-btn" data-category="Kits">Kits</a>
+          </div>
+          <div class="sort-section">
+            <span>Sort : </span>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="all-products-grid" class="products-grid"></div>
+
+        <div class="pagination-container">
+          <button class="pag-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="pag-numbers" id="pagination"></div>
+          <button class="pag-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <section class="community">
+          <div class="container-sub">
+            <h2>Join Our Community</h2>
+            <p>
+              Subscribe to our newsletter for exclusive offers, skincare tips,
+              and new product announcements.
+            </p>
+            <form class="newsletter">
+              <input type="email" placeholder="Your email address" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="container-sub">
+            <div class="footer-grid">
+              <div class="footer-col">
+                <div class="footer-logo">
+                  <img src="assets/logo.png" alt="Beauty Zone Logo" />
+                </div>
+                <p class="footer-desc">
+                  Lorem ipsum dolor sit amet consectetur. Scelerisque lectus
+                  habitasse adipiscing.
+                </p>
+                <div class="social-links">
+                  <a href="#"><i class="fa-brands fa-google"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+
+              <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                  <li><a href="#">All Products</a></li>
+                  <li><a href="#">Bestsellers</a></li>
+                  <li><a href="#">New Arrivals</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Shipping & Returns</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <hr />
+              <p>© 2025 BeautyZone. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/alProducts.js"></script>
+    <script src="js/currentUser.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

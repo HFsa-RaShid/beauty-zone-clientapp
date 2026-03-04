@@ -1,0 +1,145 @@
+.cart-section {
+  padding: 40px 0;
+  margin-top:110px;
+  margin-bottom: 60px;
+}
+.cart-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.cart-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+
+.cart-items-column {
+  flex: 2;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.item-info img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.qty-controls button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  background: none;
+  cursor: pointer;
+}
+
+.item-price-delete {
+  text-align: right;
+}
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.delete-icon {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.continue-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.order-summary {
+  flex: 1;
+  background-color: #F9E4CB;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.order-summary h3 {
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.total-row {
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.promo-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.promo-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.apply-btn {
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 15px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checkout-btn:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-wrapper {
+    flex-direction: column;
+  }
+}

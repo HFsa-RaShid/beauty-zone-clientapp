@@ -1,0 +1,171 @@
+/* Contact Page Specific Styles */
+.contact-main {
+    margin-top: 100px;
+}
+
+.contact-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 80px;
+}
+
+.contact-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.get-in-touch h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.get-in-touch p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+}
+
+.btn-let-us-know {
+    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-let-us-know:hover {
+    background: #000;
+    color: #fff;
+}
+
+.contact-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Other Ways Section */
+.other-ways {
+    background-color: #f2e9dc; /* Beige tone from image */
+    padding: 60px 0;
+}
+
+.section-title-small {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.ways-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.way-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.way-item i {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.way-item h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.way-item p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* FAQ Section */
+.faq-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    padding: 100px 20px;
+}
+
+.faq-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.faq-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.faq-content p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 200px;
+    padding-bottom: 20px;
+}
+
+.accordion-item.active i {
+    transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-top, .faq-section {
+        grid-template-columns: 1fr;
+    }
+    .ways-grid {
+        grid-template-columns: 1fr;
+    }
+}

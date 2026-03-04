@@ -1,0 +1,131 @@
+
+.checkout-container {
+  padding-top:170px;
+}
+.page-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.checkout-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 6px 0px 60px 0px;
+}
+
+/* Left Form Box */
+.checkout-form-box {
+  flex: 2;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.form-section {
+  margin-bottom: 40px;
+}
+.form-section h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.input-group label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+.input-group input,
+.input-group select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.ship-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.ship-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.btn-payment {
+  background: #000;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+}
+
+/* Right Summary Box */
+.order-summary-box {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 20px;
+}
+.checkout-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.checkout-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.checkout-item-info {
+  flex: 1;
+  font-size: 14px;
+}
+.checkout-item-info h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.summary-details {
+  margin-top: 20px;
+}
+.s-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #666;
+}
+.total {
+  color: #000;
+  font-size: 18px;
+  margin-top: 15px;
+}

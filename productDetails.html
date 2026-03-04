@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - Beauty Zone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/productDetails.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/products.css" />
+  </head>
+  <body>
+    <div class="container-outer">
+      <nav class="navbar">
+        <div class="container-sub">
+          <div class="navbox">
+            <div class="navbox1">
+              <div class="logo">
+                <img
+                  src="assets/logo.png"
+                  onclick="window.location.href = 'index.html'"
+                  alt="Beauty Zone Logo"
+                />
+              </div>
+              <ul class="nav-links">
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Collections</a></li>
+                <li>
+                  <a onclick="window.location.href = 'about.html'">About</a>
+                </li>
+                <li>
+                  <a onclick="window.location.href = 'contact.html'">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbox1">
+              <div class="nav-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i
+                  class="fa-solid fa-bag-shopping"
+                  onclick="window.location.href = 'cart.html'"
+                ></i>
+              </div>
+              <div id="auth-btn-container">
+                <button
+                  class="nav-toggle-btn"
+                  onclick="window.location.href = 'register.html'"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="container-sub detail-page-wrapper">
+        <section class="product-main-info">
+          <div class="product-gallery">
+            <div class="thumbnail-list" id="thumbList"></div>
+
+            <div class="main-image-container">
+              <img id="mainImg" src="" alt="Main Product" />
+              <div class="zoom-icon">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-content">
+            <h1 id="detName">Loading Product...</h1>
+
+            <div class="det-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>157 Reviews</span>
+            </div>
+
+            <div class="det-price">
+              <span id="detPrice">$0.00</span>
+              <del id="oldPrice">$99.00</del>
+            </div>
+            <p class="promo-text">Save 65% right now</p>
+
+            <div class="det-description">
+              <h3>Details</h3>
+              <p id="detDesc" class="main-details-text"></p>
+
+              <h4>STRAIGHT UP:</h4>
+              <p id="straightUpText" class="highlight-text"></p>
+
+              <h4>THE LOWDOWN:</h4>
+              <p id="lowdownText" class="lowdown-text"></p>
+            </div>
+
+            <div class="purchase-actions">
+              <div class="qty-selector">
+                <button type="button" onclick="changeQty(-1)">-</button>
+                <input type="number" id="qtyInput" value="1" readonly />
+                <button type="button" onclick="changeQty(1)">+</button>
+              </div>
+
+              <button class="btn-primary-dark" id="addCartBtn">
+                Add to Cart <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <button class="wish-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="related-section">
+          <div class="section-header">
+            <h2>Hand picked for you</h2>
+            <a class="view-all" href="allProducts.html">
+              View all products <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="products-grid" id="related-grid"></div>
+        </section>
+
+        <section class="reviews-section">
+          <div class="reviews-container">
+            <div class="review-sidebar">
+              <h2>Ratings and Reviews</h2>
+              <div class="avg-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>157 Reviews</span>
+              </div>
+              <button class="btn-outline">Write a Review</button>
+            </div>
+
+            <div class="review-list">
+              <div class="review-card">
+                <div class="rev-header">
+                  <img src="assets/user.png" alt="user" />
+                  <div>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="rev-text">
+                      You made it so simple. My new site is so much faster and
+                      easier to work with than my old site.
+                    </p>
+                    <small>Kristin Watson - March 14, 2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="related-section">
+          <div class="section-header">
+            <h2>Best Seller</h2>
+            <a class="view-all" href="allProducts.html"
+              >View all products <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="products-grid" id="best-seller-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container-sub">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <div class="footer-logo">
+                <img src="assets/logo.png" alt="Beauty Zone Logo" />
+              </div>
+              <p class="footer-desc">
+                Lorem ipsum dolor sit amet consectetur. Scelerisque lectus
+                habitasse adipiscing.
+              </p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4>Shop</h4>
+              <ul>
+                <li><a href="#">All Products</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">New Arrivals</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>About</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <hr />
+            <p>© 2025 BeautyZone. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/productDetails.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <div class="container-outer">
+      <nav class="navbar">
+        <div class="container-sub">
+          <div class="navbox">
+            <div class="navbox1">
+              <div class="logo">
+                <img src="assets/logo.png" onclick="window.location.href = 'index.html'" alt="Beauty Zone Logo" />
+              </div>
+              <ul class="nav-links">
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a onclick="window.location.href = 'about.html'">About</a></li>
+                <li>
+                  <a onclick="window.location.href = 'contact.html'">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbox1">
+              <div class="nav-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i
+                  class="fa-solid fa-bag-shopping"
+                  onclick="window.location.href = 'cart.html'"
+                ></i>
+              </div>
+              <div id="auth-btn-container">
+                <button
+                  class="nav-toggle-btn"
+                  onclick="window.location.href = 'register.html'"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="cart-section">
+        <div class="container-sub">
+          <h2 class="cart-title">Shopping Cart</h2>
+
+          <div class="cart-wrapper">
+            <div class="cart-items-column">
+              <div id="cart-container">
+                <div class="cart-item">
+                  <div class="item-info">
+                    <img src="assets/c1.jpg" alt="Product" />
+                    <div class="item-details">
+                      <h3>Hydrating Essence</h3>
+                      <p>Quantity: 1</p>
+                      <div class="qty-controls">
+                        <button>+</button><span>1</span><button>-</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-price-delete">
+                    <p class="price">$48</p>
+                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="continue-btn"
+                onclick="window.location.href = 'index.html'"
+              >
+                Continue Shopping
+              </button>
+            </div>
+
+            <div class="order-summary">
+              <h3>Order Summary</h3>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span>$152.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span>$5.99</span>
+              </div>
+              <hr />
+              <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="cart-total">$157.99</span>
+              </div>
+
+              <div class="promo-section">
+                <input type="text" placeholder="Promo Code" />
+                <button class="apply-btn">Apply</button>
+              </div>
+
+              <button
+                class="checkout-btn"
+                onclick="window.location.href = 'checkout.html'"
+              >
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container-sub">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <div class="footer-logo">
+                <img src="assets/logo.png" alt="Beauty Zone Logo" />
+              </div>
+              <p class="footer-desc">
+                Lorem ipsum dolor sit amet consectetur. Scelerisque lectus
+                habitasse adipiscing.
+              </p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4>Shop</h4>
+              <ul>
+                <li><a href="#">All Products</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">New Arrivals</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>About</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <hr />
+            <p>© 2025 BeautyZone. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/cart.js"></script>
+    <script src="js/currentUser.js"></script>
+  </body>
+</html>

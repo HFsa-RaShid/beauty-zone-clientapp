@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" />
+  <title>Beauty Zone</title>
+</head>
+<body>
+
+  <!-- Outer Container -->
+  <div class="container-outer">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+  <div class="container-sub"> <div class="navbox">
+      <div class="navbox1">
+        <div class="logo">
+          <img src="assets/logo.png" onclick="window.location.href = 'index.html'" alt="Beauty Zone Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Skincare</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a onclick="window.location.href = 'about.html'">About</a></li>
+          <li><a onclick="window.location.href='contact.html'">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbox1">
+        <div class="nav-icons">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-bag-shopping" onclick="window.location.href='cart.html'"></i>
+        </div>
+        <div id="auth-btn-container">
+          <button class="nav-toggle-btn" onclick="window.location.href='register.html'">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container-sub hero-container">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>Discover your skin's true potential</h1>
+            <p>Premium skincare that combines innovation with clean, effective ingredients for all skin types.</p>
+            <div class="hero-buttons">
+              <button class="btn shop">Shop Now</button>
+              <button class="btn about">About</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestsellers section -->
+    <section class="section">
+      <div class="container-sub">
+        <div class="section-header">
+          <h2 class="section-title">Bestsellers</h2>
+          <button onclick="window.location.href='allProducts.html'" class="view-all hover">View all products <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div id="bestsellers-container" class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Categories section -->
+    <section class="category-section">
+      <div class="container-sub">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+          <div class="category-card" style="background-image: url('assets/c1.jpg')">
+            <div class="cat-overlay"><span>Cleansers</span></div>
+          </div>
+          <div class="category-card" style="background-image: url('assets/c2.jpg')">
+            <div class="cat-overlay"><span>Serums</span></div>
+          </div>
+          <div class="category-card" style="background-image: url('assets/c3.jpg')">
+            <div class="cat-overlay"><span>Moisturizers</span></div>
+          </div>
+          <div class="category-card" style="background-image: url('assets/c4.jpg')">
+            <div class="cat-overlay"><span>Masks</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section">
+      <div class="container-sub">
+        <div class="section-header">
+          <h2 class="section-title">New Arrivals</h2>
+          <button onclick="window.location.href='allProducts.html'" class="view-all">View all products <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div id="new-arrive-container" class="products-grid"></div>
+      </div>
+    </section>
+
+    <section class="philosophy">
+  <div class="container-sub philosophy-grid">
+    <div class="philosophy-content">
+      <h2>Our Skincare Philosophy</h2>
+      <p>Seoul Mirage was born from a deep appreciation for Korean skincare innovation and the belief that effective products should be accessible to everyone.</p>
+      <p>We combine time-tested Korean ingredients with modern science to create formulations that deliver visible results. Each product is meticulously crafted to honor the tradition of the multi-step skincare ritual while fitting seamlessly into your daily routine.</p>
+      <button class="btn-about">About Us</button>
+    </div>
+    <div class="philosophy-image">
+      <img src="assets/product.jpg" alt="Skincare Products" />
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container-sub">
+    <p class="review-subtitle">3940+ Happy Users</p>
+    <h2>Don't just take our words</h2>
+    <div class="review-slider" id="review-slider">
+      </div>
+    <div class="dots" id="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<section class="community">
+  <div class="container-sub">
+    <h2>Join Our Community</h2>
+    <p>Subscribe to our newsletter for exclusive offers, skincare tips, and new product announcements.</p>
+    <form class="newsletter">
+      <input type="email" placeholder="Your email address" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container-sub">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="assets/logo.png" alt="Beauty Zone Logo" />
+        </div>
+        <p class="footer-desc">
+          Lorem ipsum dolor sit amet consectetur. Scelerisque lectus habitasse adipiscing.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Bestsellers</a></li>
+          <li><a href="#">New Arrivals</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <hr />
+      <p>© 2025 BeautyZone. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+  </div> <!-- container-outer -->
+<script src="js/currentUser.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/reviews.js" defer></script>
+</body>
+</html>

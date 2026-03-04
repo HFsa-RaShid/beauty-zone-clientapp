@@ -1,0 +1,177 @@
+
+.about-page {
+    margin-top: 100px; 
+}
+
+.container-sub.grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.container-sub.grid-two.reverse {
+    direction: ltr;
+}
+
+.text-content h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.text-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.about-header {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-header span {
+    font-weight: 700;
+}
+
+/* Philosophy Values */
+.values-list {
+    margin-top: 40px;
+}
+
+.value-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #000;
+}
+
+.value-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Image Styles */
+.image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.main-portrait img {
+    height: 600px; 
+}
+
+
+.ingredients-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fdf2e9; /* ছবির সেই হালকা ক্রিম/বেজ ব্যাকগ্রাউন্ড */
+}
+
+.ingredients-main-title {
+  font-size: 42px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ingredients-subtitle {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ing-card {
+  position: relative;
+  height: 380px; /* ছবির অনুপাত অনুযায়ী হাইট */
+  overflow: hidden;
+  border-radius: 2px; /* ছবির মতো একদম শার্প বা সামান্য রাউন্ড কর্নার */
+}
+
+.ing-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ছবির মতো Exact Overlay */
+.ing-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 40, 35, 0.4); /* ব্রাউনিশ ডার্ক ওভারলে যা ছবিতে আছে */
+  display: flex;
+  align-items: center; /* টেক্সট সেন্টারে রাখার জন্য */
+  justify-content: center;
+  padding: 30px;
+  text-align: left; /* টেক্সট লেফট অ্যালাইনড */
+}
+
+.ing-text-box {
+  width: 100%;
+}
+
+.ing-text-box h4 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.ing-text-box p {
+  font-size: 14px;
+  color: #f0f0f0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .container-sub.grid-two {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .value-item {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+  .ing-card {
+    height: 300px;
+  }
+    
+    .journey-section .container-sub {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>Checkout - Beauty Zone</title>
+  </head>
+
+  <body>
+    <div class="container-outer" style="background-color: #f9e4cb">
+      <nav class="navbar">
+        <div class="container-sub">
+          <div class="navbox">
+            <div class="navbox1">
+              <div class="logo">
+                <img src="assets/logo.png" onclick="window.location.href = 'index.html'" alt="Beauty Zone Logo" />
+              </div>
+              <ul class="nav-links">
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a onclick="window.location.href = 'about.html'">About</a></li>
+                <li>
+                  <a onclick="window.location.href = 'contact.html'">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbox1">
+              <div class="nav-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i
+                  class="fa-solid fa-bag-shopping"
+                  onclick="window.location.href = 'cart.html'"
+                ></i>
+              </div>
+              <div id="auth-btn-container">
+                <button
+                  class="nav-toggle-btn"
+                  onclick="window.location.href = 'register.html'"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-sub">
+        <div class="checkout-container">
+          <h1 class="page-title">Checkout</h1>
+
+          <div class="checkout-layout">
+            <form id="checkoutForm" class="checkout-form-box">
+              <section class="form-section">
+                <h3>Shipping Information</h3>
+                <div class="input-row">
+                  <div class="input-group">
+                    <label>Full name</label>
+                    <input
+                      type="text"
+                      id="cus_name"
+                      required
+                      placeholder="Full Name"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label>Last name</label>
+                    <input type="text" id="last_name" required />
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="cus_email" required />
+                  </div>
+                  <div class="input-group">
+                    <label>Phone</label>
+                    <input type="text" id="cus_phone" required />
+                  </div>
+                </div>
+                <div class="input-group full-width">
+                  <label>Apartment, suite, etc. (optional)</label>
+                  <input type="text" id="cus_add1" />
+                </div>
+                <div class="input-row triplet">
+                  <div class="input-group">
+                    <label>City</label>
+                    <input type="text" id="cus_city" required />
+                  </div>
+                  <div class="input-group">
+                    <label>State/Province</label>
+                    <select id="cus_state">
+                      <option value="">Select</option>
+                      <option value="Dhaka">Dhaka</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label>Postal Code</label>
+                    <input type="text" id="cus_postcode" required />
+                  </div>
+                </div>
+                <div class="input-group full-width">
+                  <label>Country</label>
+                  <select id="cus_country">
+                    <option value="Bangladesh">Bangladesh</option>
+                  </select>
+                </div>
+              </section>
+
+              <section class="form-section">
+                <h3>Shipping Method</h3>
+                <div class="shipping-options">
+                  <label class="ship-card">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      value="5.99"
+                      checked
+                      data-method="Standard"
+                    />
+                    <div class="ship-info">
+                      <span>Standard Shipping (5-7 business days)</span>
+                      <strong>$5.99</strong>
+                    </div>
+                  </label>
+                  <label class="ship-card">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      value="12.99"
+                      data-method="Express"
+                    />
+                    <div class="ship-info">
+                      <span>Express Shipping (2-3 business days)</span>
+                      <strong>$12.99</strong>
+                    </div>
+                  </label>
+                  <label class="ship-card">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      value="24.99"
+                      data-method="Overnight"
+                    />
+                    <div class="ship-info">
+                      <span>Overnight Shipping (1 business day)</span>
+                      <strong>$24.99</strong>
+                    </div>
+                  </label>
+                </div>
+              </section>
+
+              <div class="form-footer">
+                <button type="submit" class="btn-payment">
+                  Payment <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </form>
+
+            <aside class="order-summary-box">
+              <h3>Order Summary</h3>
+              <div id="checkout-items-list"></div>
+              <div class="summary-details">
+                <div class="s-row">
+                  <span>Subtotal</span> <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="s-row">
+                  <span>Shipping</span> <span id="summary-shipping">$5.99</span>
+                </div>
+
+                <hr />
+                <div class="s-row total">
+                  <span>Total</span> <strong id="summary-total">$0.00</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-sub">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <div class="footer-logo">
+                <img src="assets/logo.png" alt="Beauty Zone Logo" />
+              </div>
+              <p class="footer-desc">
+                Lorem ipsum dolor sit amet consectetur. Scelerisque lectus
+                habitasse adipiscing.
+              </p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4>Shop</h4>
+              <ul>
+                <li><a href="#">All Products</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">New Arrivals</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>About</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <hr />
+            <p>© 2025 BeautyZone. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/checkout.js"></script>
+    <script src="js/currentUser.js"></script>
+  </body>
+</html>

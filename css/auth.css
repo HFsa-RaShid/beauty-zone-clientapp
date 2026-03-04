@@ -1,0 +1,255 @@
+
+:root {
+  --bg-color: #F9E4CB;
+  --card-bg: #ffffff;
+  --text-main: #000000;
+  --text-muted: #666666;
+  --input-border: #cccccc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.toggle-text {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.toggle-text a {
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1.5px solid black;
+  cursor: pointer;
+}
+
+/* The Card Styling */
+.auth-card {
+  background: var(--card-bg);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  text-transform: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: var(--text-main);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* Options Row (Forgot pass & Checkbox) */
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  margin: 20px 0;
+}
+
+.options-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: var(--text-main);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Button */
+.btn-black {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+.btn-black:hover {
+  background: #333333;
+}
+
+/* Legal Text */
+.legal-text {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 30px;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.legal-text b {
+  font-weight: 700;
+}
+
+/* Footer Section */
+footer {
+  background: #ffffff;
+  padding: 60px 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-top: 1px solid #eeeeee;
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 15px 0;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.footer-section li:hover {
+  color: black;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; /* মোবাইলে টাইটেল একটু ছোট হবে */
+    }
+
+    .auth-card {
+        padding: 25px; /* কার্ডের ভেতরের স্পেস কমবে */
+        max-width: 90%; /* স্ক্রিনের সাথে সামঞ্জস্য থাকবে */
+    }
+
+    footer {
+        padding: 40px 5%;
+        flex-direction: column; /* ফুটার আইটেমগুলো নিচে নিচে চলে আসবে */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-section h4 {
+        margin-bottom: 10px;
+    }
+
+    .options-row {
+        flex-direction: column; 
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
+
+/* Extra small devices (Phones) */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .btn-black {
+        padding: 12px;
+    }
+}

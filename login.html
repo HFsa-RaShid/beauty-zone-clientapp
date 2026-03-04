@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" />
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+    <title>Sign In - Seoul Mirage</title>
+</head>
+<body>
+    <div class="container">
+        <div id="signin-section">
+            <h1>Sign in to your account</h1>
+            <div class="toggle-text">Or <a href="register.html">create a new account</a></div>
+            
+            <div class="auth-card">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="loginPass" required>
+                            <span class="eye-icon">
+                              <i class="fa-solid fa-eye"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="options-row">
+                        <label><input type="checkbox"> Show passwords</label>
+                        <a href="#" class="forgot-link">Forgot your password?</a>
+                    </div>
+                    <button type="submit" class="btn-black">Sign In</button>
+                </form>
+            </div>
+            <p class="legal-text">By signing in, you agree to our <b>Terms of Service</b> and <b>Privacy Policy</b>.</p>
+        </div>
+        <div id="messageBox" class="message-box"></div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>
