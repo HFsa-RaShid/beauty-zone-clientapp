@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       const res = await fetch(
-        "https://beautyzone-server.vercel.app/api/payment/init",
+        "https://beauty-zone-server-app.vercel.app/api/payment/init",
         {
           method: "POST",
           headers: {

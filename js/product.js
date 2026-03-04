@@ -1,7 +1,7 @@
 const fetchProducts = async () => {
   try {
     const response = await fetch(
-      "https://beautyzone-server-xi.vercel.app/api/products",
+      "https://beauty-zone-server-app.vercel.app/api/products",
     );
     const result = await response.json();
 

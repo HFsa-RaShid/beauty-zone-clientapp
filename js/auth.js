@@ -21,7 +21,7 @@ if (loginForm) {
 
     try {
       const response = await fetch(
-        "https://beautyzone-server.vercel.app/api/auth/login",
+        "https://beauty-zone-server-app.vercel.app/api/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -65,7 +65,7 @@ if (registerForm) {
 
     try {
       const response = await fetch(
-        "https://beautyzone-server.vercel.app/api/auth/register",
+        "https://beauty-zone-server-app.vercel.app/api/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

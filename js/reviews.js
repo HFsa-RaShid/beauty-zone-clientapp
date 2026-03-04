@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function fetchReviews() {
     try {
       const response = await fetch(
-        "https://beautyzone-server.vercel.app/api/reviews",
+        "https://beauty-zone-server-app.vercel.app/api/reviews",
       );
       allReviews = await response.json();
 

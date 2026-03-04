@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(
-      `https://beautyzone-server.vercel.app/api/products/${productId}`,
+      `https://beauty-zone-server-app.vercel.app/api/products/${productId}`,
     );
     const result = await response.json();
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       renderMainProduct(currentProduct);
 
       const allRes = await fetch(
-        `https://beautyzone-server.vercel.app/api/products`,
+        `https://beauty-zone-server-app.vercel.app/api/products`,
       );
       const allResult = await allRes.json();
 
